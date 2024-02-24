@@ -20,11 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-
-      # - name: Navigate to the deployment directory
-      #   run: |
-      #     cd linguall_frontend
-
+          
       - name: npm install, build, and test
         run: |
           npm install
@@ -35,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: linguall_frontend
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,16 +45,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
-          path: linguall_frontend
 
       - name: Set up Node.js version for deployment
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
   
-      # - name: Navigate to the deployment directory
-      #   run: |
-      #     cd linguall_frontend
   
       - name: npm install, build, and test
         run: |
