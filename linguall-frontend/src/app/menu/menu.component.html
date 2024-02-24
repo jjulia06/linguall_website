@@ -1,0 +1,18 @@
+<div class="menu">
+    <div class="logo-text">
+        <p>Lingu<span class="highlight">ALL</span></p>
+    </div>
+    <div class="navigation">
+        <div class="links">
+            <a [routerLink]="['/home']" [class.active]="currentRoute === '/home'">
+                HOME
+            </a>
+            <a [routerLink]="['/blog']" [class.active]="currentRoute === '/blog'">
+                BLOG
+            </a>
+            <a [routerLink]="['/contact']" [class.active]="currentRoute === '/contact'">
+                CONTACT
+            </a>
+        </div>
+    </div>
+</div>

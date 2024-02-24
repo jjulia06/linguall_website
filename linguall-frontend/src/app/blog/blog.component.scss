@@ -1,0 +1,62 @@
+@import "../../variables";
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    column-gap: 100px;
+
+}
+.top-container {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        top: -50px;
+        position: absolute;
+        width: 600px;
+    }
+    p {
+        width: 400px;
+        top: 140px;
+        position: absolute;
+        text-align: center;
+    }
+}
+.posts-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30rem;
+    background: $secondary_pink;
+    align-items: center;
+    justify-content: space-around;
+}
+.arrow-button {
+    cursor: pointer;
+  }
+.arrow-button:hover:focus {
+    cursor: pointer;
+  }
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+#left-arrow {
+    transform: rotate(270deg);
+}
+
+#right-arrow {
+    transform: rotate(90deg);
+}
+#date {
+    font-style: italic;
+    font-weight: 300;
+}
+

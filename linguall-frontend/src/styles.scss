@@ -1,0 +1,53 @@
+@import 'variables';
+
+a {
+  font-family: $primary_font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: $secondary_grey;
+  text-decoration: none;
+  padding: 10px;
+}
+a:hover{
+    font-style: bold;
+    font-weight: 500;
+    font-size: 18px;
+    color: $primary_grey;
+  }
+
+p {
+    font-family: $secondary_font;
+    color: $primary_grey;
+    font-weight: 300;
+    font-size: 16px;
+
+}
+
+h1 {
+    font-family: $secondary_font;
+    color:$primary_grey;
+    font-weight: 500;
+    font-size: 66px;
+
+}
+
+h1 {
+  font-family: $secondary_font;
+  color:$primary_grey;
+  font-weight: 500;
+  font-size: 66px;
+
+}
+
+h2 {
+  font-family: $primary_font;
+  color:$primary_grey;
+  font-weight: 400;
+  font-size: 50px;
+
+}
+
+body {
+  margin: 0
+}

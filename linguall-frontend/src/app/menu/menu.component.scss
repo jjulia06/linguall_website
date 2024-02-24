@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.menu {
+    display: flex;
+    margin: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    justify-self: left;
+    p {
+        margin: 0;
+        font-size: 36px;
+    }
+}
+.navigation {
+    width: 80%;
+    display: flex;
+    justify-content: right;
+    .links {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+    a.active {
+        font-style: bold;
+        font-weight: 500;
+        font-size: 18px;
+        color: $primary_grey;
+    }
+}
+
+.highlight {
+    color: $primary_pink
+}
+
+
+
+

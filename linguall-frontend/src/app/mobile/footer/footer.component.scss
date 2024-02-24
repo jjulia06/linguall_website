@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.logo-text {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    justify-content: center;
+    p {
+        margin: 0;
+        font-size: 30px;
+    }
+}
+.highlight {
+    color: $primary_pink
+}
