@@ -9,12 +9,8 @@ export class BlogComponent {
 
   posts_content = [
     {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...',
-      date: '2024-02-22'
-    },
-    {
-      text: 'Another blog post content goes here.',
-      date: '2024-02-23'
+      text: 'Hej! Przedstawiamy wam naszą stronę internetową na której będziemy zamieszczać nasze plany i informować was o przyszłych wydarzeniach. Wyczekujcie!',
+      date: '2024-02-24'
     },
   ];
 
