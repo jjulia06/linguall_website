@@ -23,7 +23,7 @@ jobs:
 
       - name: Navigate to the deployment directory
         run: |
-          cd ${{ github.workspace }}/linguall_website/linguall_frontend
+          cd ${{ github.workspace }}/linguall_frontend
 
       - name: npm install, build, and test
         run: |
@@ -57,7 +57,7 @@ jobs:
   
       - name: Navigate to the deployment directory
         run: |
-          cd ${{ github.workspace }}/linguall_website/linguall_frontend
+          cd ${{ github.workspace }}/linguall_frontend
   
       - name: npm install, build, and test
         run: |
