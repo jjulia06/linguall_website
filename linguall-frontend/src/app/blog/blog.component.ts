@@ -1,23 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { PostService } from '../services/post.service';
+import { Post } from '../interfaces/post';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit, OnDestroy {
 
-  posts_content = [
-    {
-      text: 'Hej! Przedstawiamy wam naszą stronę internetową na której będziemy zamieszczać nasze plany i informować was o przyszłych wydarzeniach. Wyczekujcie!',
-      date: '2024-02-24'
-    },
-  ];
+    currentPostIndex = 0;
+    posts: Post[] = [];
+    private postsSubscription!: Subscription;
 
-  currentPostIndex = 0;
+    constructor(private postService: PostService) { }
+  
+    ngOnInit() {
+      this.postService.fetchAllPosts()
+      this.postsSubscription = this.postService.posts.subscribe(
+        data => {
+          console.log(data)
+                this.posts = data
+        })
+    }
+
+    ngOnDestroy() {
+      if (this.postsSubscription) {
+        this.postsSubscription.unsubscribe();
+      }
+    }
 
   nextPost() {
-    if (this.currentPostIndex < this.posts_content.length - 1) {
+    if (this.currentPostIndex < this.posts.length - 1) {
       this.currentPostIndex++;
     }
   }

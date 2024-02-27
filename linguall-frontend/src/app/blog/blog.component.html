@@ -12,11 +12,11 @@
         <div class="left-arrow-container" [style.opacity]="currentPostIndex === 0 ? '0.3' : '1'" (click)="prevPost()">
           <img id="left-arrow" src="../../assets/icons/arrow.png" alt="Previous">
         </div>
-        <div class="post" *ngIf="posts_content.length > 0">
-          <p>{{ posts_content[currentPostIndex].text }}</p>
-          <p id="date">{{ posts_content[currentPostIndex].date }}</p>
+        <div class="post" *ngIf="this.posts.length > 0">
+          <p>{{ this.posts[currentPostIndex].content }}</p>
+          <p id="date">{{ this.posts[currentPostIndex].date }}</p>
         </div>
-        <div class="right-arrow-container" [style.opacity]="currentPostIndex === (posts_content.length - 1) ? '0.3' : '1'" (click)="nextPost()">
+        <div class="right-arrow-container" [style.opacity]="currentPostIndex === (this.posts.length - 1) ? '0.3' : '1'" (click)="nextPost()">
           <img id="right-arrow" src="../../assets/icons/arrow.png" alt="Next">
         </div>
       </div>      
