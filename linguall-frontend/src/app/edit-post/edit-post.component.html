@@ -1,0 +1,39 @@
+<div class="main-container">
+    <div class="back-container">
+        <button (click)="back()">WRÓĆ</button>
+    </div>
+    <div class="edit-container">
+        <div class="posts-container" *ngFor="let post of allPosts">
+            <div class="post">
+                <p id="date">{{ post.date }}</p>
+                <ng-container *ngIf="editingPostId === post.id">
+                    <div class="new-post-content"  *ngIf="editingPostId === post.id">
+                        <textarea [(ngModel)]="postContent"></textarea>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="!editingPostId || editingPostId !== post.id">
+                    <p *ngIf="editingPostId !== post.id">{{ post.content }}</p>
+                </ng-container>
+            
+            </div>
+            <ng-container *ngIf="editingPostId && editingPostId === post.id">
+                <div class="edit-buttons">
+                    <button (click)="editPost(post)">Zapisz</button>
+                    <button (click)="cancelEditing()">Anuluj</button>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="editingPostId !== post.id">
+                <div class="buttons-container">
+                    <button (click)="startEditing(post)" class="edit-button">
+                        <img src="../../assets/icons/edit.png" alt="Edit Post">
+                    </button>
+                    <button (click)="deletePost(post)" class="delete-button">
+                        <img src="../../assets/icons/delete.png" alt="Delete Post">
+                    </button>            
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+

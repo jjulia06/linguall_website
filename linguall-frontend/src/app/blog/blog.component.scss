@@ -39,12 +39,7 @@
     justify-self: center;
     box-shadow: 4px 2px 8px $primary_grey;
 }
-.arrow-button {
-    cursor: pointer;
-  }
-.arrow-button:hover:focus {
-    cursor: pointer;
-  }
+
 .post {
     display: flex;
     flex-direction: column;
@@ -55,8 +50,24 @@
         overflow-wrap: break-word; 
         max-width: 100%;
     }
-    
 }
+
+button {
+    background-color: $secondary_pink;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    img {
+        height: 80px;
+        transition: all 0.2s ease; 
+    }
+}
+button:hover {
+    img {
+        height: 90px;
+    }
+}
+
 #left-arrow {
     transform: rotate(270deg);
 }

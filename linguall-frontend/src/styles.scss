@@ -14,6 +14,7 @@ a:hover{
     font-weight: 500;
     font-size: 18px;
     color: $primary_grey;
+    transition: all 0.2s ease; 
   }
 
 p {
@@ -27,7 +28,7 @@ p {
 h1 {
     font-family: $secondary_font;
     color:$primary_grey;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 66px;
 
 }
@@ -35,7 +36,7 @@ h1 {
 h1 {
   font-family: $secondary_font;
   color:$primary_grey;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 66px;
 
 }
@@ -45,7 +46,6 @@ h2 {
   color:$primary_grey;
   font-weight: 400;
   font-size: 50px;
-
 }
 
 body {
@@ -63,4 +63,29 @@ button {
   border-radius: 10px;
   border: 1px solid $secondary_grey; 
   box-shadow: 2px 1px 8px $primary_grey; 
+  transition: all 0.2s ease; 
+}
+button:hover {
+  font-size: 18px;
+  border: 2px solid $secondary_grey; 
+  box-shadow: 6px 4px 10px $secondary_grey; 
+  transition: all 0.2s ease; 
+}
+
+textarea {
+  border-radius: 10px;
+  border: 2px solid $secondary_grey; 
+  width: 1000px;
+  height: 400px;
+  font-family: $primary_font;
+  font-style: italic;
+  font-size: 16px;
+  p {
+    overflow-wrap: break-word;
+    max-width: 100%; 
+    font-family: $primary_font;
+    color: $primary_grey;
+    font-weight: 300;
+    font-size: 16px;
+  }
 }

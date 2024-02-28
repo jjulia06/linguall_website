@@ -25,14 +25,13 @@ export class PostService {
         return this.http.get<Post[]>(this.postUrl)
             .subscribe({
                 next: data => {
-                    console.log(data);
                     this.postsData = data;
                     this.postSub.next([...this.postsData]);
                 },
             })
     }
 
-    addPost(content: String) {
+    addPost(content: string) {
         const post: Post = {
             content: content,
             date: new Date().toLocaleDateString('en-GB')

@@ -8,19 +8,16 @@
             Będziemy tutaj informować was o przyszłych wydarzeniach i naszych planach 
         </p>
     </div>
-    <!-- <div class="content-container"> -->
       <div class="posts-container">
-        <div class="left-arrow-container" [style.opacity]="currentPostIndex === 0 ? '0.3' : '1'" (click)="prevPost()">
+        <button class="left-arrow-button" [style.opacity]="currentPostIndex === 0 ? '0.3' : '1'" (click)="prevPost()">
           <img id="left-arrow" src="../../assets/icons/arrow.png" alt="Previous">
-        </div>
+        </button>
         <div class="post" *ngIf="this.posts.length > 0">
           <p>{{ this.posts[currentPostIndex].content }}</p>
           <p id="date">{{ this.posts[currentPostIndex].date }}</p>
         </div>
-        <div class="right-arrow-container" [style.opacity]="currentPostIndex === (this.posts.length - 1) ? '0.3' : '1'" (click)="nextPost()">
+        <button class="right-arrow-button" [style.opacity]="currentPostIndex === (this.posts.length - 1) ? '0.3' : '1'" (click)="nextPost()">
           <img id="right-arrow" src="../../assets/icons/arrow.png" alt="Next">
-        </div>
+        </button>
       </div>      
-    <!-- </div> -->
-
 </div>

@@ -26,22 +26,9 @@
     align-items: center;
     justify-items: center;
 
-    textarea {
-        border-radius: 10px;
-        border: 2px solid $secondary_grey; 
-        width: 1000px;
-        height: 400px;
-        font-family: $primary_font;
-        font-style: italic;
-        font-size: 16px;
-        p {
-            overflow-wrap: break-word;
-            max-width: 100%; 
-        }
-    }
     button {
         background-color: $secondary_pink;
-        transition: all 0.6s ease; 
+        transition: all 0.3s ease; 
     }
     button.clicked {
         width: 150px;
@@ -50,11 +37,5 @@
         color: white;
         border: 2px solid $secondary_pink; 
         box-shadow: 2px 1px 8px $primary_pink; 
-    }
-
-    .back_container {
-        button {
-            transition: all 0.6s ease; 
-        }
     }
 }
