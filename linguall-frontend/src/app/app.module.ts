@@ -9,6 +9,11 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './mobile/footer/footer.component';
 import { MenuMobileComponent } from './mobile/menu/menu-mobile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminPostComponent } from './admin-post/admin-post.component';
+import { FormsModule } from '@angular/forms';
+import { AddPostComponent } from './add-post/add-post.component';
+import { EditPostComponent } from './edit-post/edit-post.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +22,16 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     MenuComponent,
     FooterComponent,
-    MenuMobileComponent
+    MenuMobileComponent,
+    AdminPostComponent,
+    AddPostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

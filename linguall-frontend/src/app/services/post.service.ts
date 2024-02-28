@@ -8,7 +8,7 @@ import { Post } from '../interfaces/post';
 })
 export class PostService {
 
-  private apiPostsUrl = '/api/post'; 
+  private postUrl = '/api/post'; 
   private postsData: Post[] = [];
   private postSub = new BehaviorSubject<Post[]>([])
 
@@ -22,7 +22,7 @@ export class PostService {
     }
 
     fetchAllPosts() {
-        return this.http.get<Post[]>(this.apiPostsUrl)
+        return this.http.get<Post[]>(this.postUrl)
             .subscribe({
                 next: data => {
                     console.log(data);
@@ -31,6 +31,23 @@ export class PostService {
                 },
             })
     }
+
+    addPost(content: String) {
+        const post: Post = {
+            content: content,
+            date: new Date().toLocaleDateString('en-GB')
+          };
+          return this.http.post<Post>(this.postUrl, post);
+    }
+
+    deletePost(id: number) {
+        return this.http.delete(`${this.postUrl}/${id}`)
+    }
+
+    editPost(id: number, newContent: string) {
+        const update: { content: string } = { content: newContent };
+        console.log(update)
+        return this.http.put(`${this.postUrl}/${id}`, update);
+      }
+
 }
-
-

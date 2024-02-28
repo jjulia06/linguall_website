@@ -20,10 +20,11 @@ export class BlogComponent implements OnInit, OnDestroy {
       this.postService.fetchAllPosts()
       this.postsSubscription = this.postService.posts.subscribe(
         data => {
-          console.log(data)
-                this.posts = data
+          this.posts = data.sort((a, b) => {
+            return new Date(b.date as string).getTime() - new Date(a.date as string).getTime();
+          });
         })
-    }
+      }
 
     ngOnDestroy() {
       if (this.postsSubscription) {

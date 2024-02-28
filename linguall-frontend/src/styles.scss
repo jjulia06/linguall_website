@@ -51,3 +51,16 @@ h2 {
 body {
   margin: 0
 }
+
+button {
+  width: 120px;
+  height: 70px;
+  background-color: $primary_baby_blue;
+  font-size: 16px;
+  font-family: $primary_font;
+  font-weight: 400;
+  color: $primary_grey;
+  border-radius: 10px;
+  border: 1px solid $secondary_grey; 
+  box-shadow: 2px 1px 8px $primary_grey; 
+}

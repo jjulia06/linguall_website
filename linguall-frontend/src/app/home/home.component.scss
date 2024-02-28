@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .container {
     position: relative;
     display: flex;
@@ -15,6 +17,8 @@
     top: 50%;
     left: 45%;
     p {
+        font-family: $primary_font;
+        font-weight: 500;
         font-size: 20px;
         font-style: italic;
     }

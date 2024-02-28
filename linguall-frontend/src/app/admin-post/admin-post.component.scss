@@ -1,0 +1,14 @@
+@import "../../styles";
+@import "../../variables";
+
+.main-container {
+    margin: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    button {
+        transition: all 0.6s ease; 
+    }
+    
+}

@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    column-gap: 100px;
+    padding: 10px;
+    align-items: center;
 
 }
 .top-container {
@@ -29,11 +30,14 @@
 .posts-container {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     height: 30rem;
     background: $secondary_pink;
     align-items: center;
     justify-content: space-around;
+    align-content: center;
+    justify-self: center;
+    box-shadow: 4px 2px 8px $primary_grey;
 }
 .arrow-button {
     cursor: pointer;
@@ -46,7 +50,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 50%;
+    p {
+        overflow-wrap: break-word; 
+        max-width: 100%;
+    }
+    
 }
 #left-arrow {
     transform: rotate(270deg);
